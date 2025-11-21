@@ -1,0 +1,75 @@
+# CoreX Configuration File
+# Configure all aspects of player join/leave events
+
+# Join/Leave Messages Configuration
+messages:
+  # Join message settings
+  join:
+    enabled: true
+    # Use {player} as placeholder for player name
+    # Color codes: &a (green), &c (red), &e (yellow), &b (aqua), &7 (gray), etc.
+    format: "&a✓ &7{player} has joined the game!"
+  
+  # Leave message settings
+  leave:
+    enabled: true
+    format: "&c✗ &7{player} has left the game!"
+
+# Title Configuration (shown on player join)
+title:
+  enabled: true
+  # Main title text
+  title: "&b&lWelcome Back!"
+  # Subtitle text (use {player} for player name)
+  subtitle: "&7Hello, &e{player}&7!"
+  # Fade in time (in ticks, 20 ticks = 1 second)
+  fadeIn: 10
+  # Stay time (in ticks)
+  stay: 70
+  # Fade out time (in ticks)
+  fadeOut: 20
+
+# Fireworks Configuration
+fireworks:
+  enabled: true
+  # List of worlds where fireworks should spawn on join
+  # Leave empty [] to disable, or add world names like: ["world", "world_nether"]
+  enabledWorlds:
+    - "world"
+  
+  # Number of fireworks to spawn
+  amount: 1
+  
+  # Firework power (flight duration) - 0 to 3
+  power: 1
+  
+  # Firework effects - you can have multiple effects
+  effects:
+    - type: "BALL_LARGE"  # Options: BALL, BALL_LARGE, BURST, CREEPER, STAR
+      colors:             # Primary colors (RGB format)
+        - 255,0,0         # Red
+        - 0,255,0         # Green
+        - 0,0,255         # Blue
+      fadeColors:         # Fade colors (RGB format)
+        - 255,255,255     # White
+      flicker: true       # Sparkling effect
+      trail: true         # Trail effect
+  
+  # Delay before spawning fireworks (in ticks)
+  delay: 5
+
+# Sound Configuration
+sounds:
+  # Play sound on join
+  join:
+    enabled: true
+    sound: "ENTITY_PLAYER_LEVELUP"  # Sound effect name
+    volume: 1.0
+    pitch: 1.0
+  
+  # Play sound on leave
+  leave:
+    enabled: false
+    sound: "BLOCK_NOTE_BLOCK_PLING"
+    volume: 0.5
+    pitch: 0.5
