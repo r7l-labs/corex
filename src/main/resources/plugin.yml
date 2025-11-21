@@ -1,0 +1,11 @@
+name: CoreX
+version: '${project.version}'
+main: org.r7l.corex.CoreX
+api-version: '1.21'
+author: r7l-labs
+description: Custom join and leave messages plugin with cool styling
+website: https://github.com/r7l-labs/corex
+
+commands: {}
+
+permissions: {}
