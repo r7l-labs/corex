@@ -6,6 +6,13 @@ author: r7l-labs
 description: Custom join and leave messages plugin with cool styling
 website: https://github.com/r7l-labs/corex
 
-commands: {}
+commands:
+  corexreload:
+    description: Reloads the CoreX configuration.
+    usage: /corexreload
+    permission: corex.reload
 
-permissions: {}
+permissions:
+  corex.reload:
+    description: Allows reloading the CoreX configuration.
+    default: op

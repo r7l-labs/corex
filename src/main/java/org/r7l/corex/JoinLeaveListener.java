@@ -128,7 +128,7 @@ public class JoinLeaveListener implements Listener {
         int power = plugin.getConfig().getInt("fireworks.power", 1);
         
         for (int i = 0; i < amount; i++) {
-            Firework firework = (Firework) location.getWorld().spawnEntity(location, EntityType.FIREWORK_ROCKET);
+            Firework firework = (Firework) location.getWorld().spawnEntity(location, EntityType.FIREWORK);
             FireworkMeta meta = firework.getFireworkMeta();
             
             // Set power
